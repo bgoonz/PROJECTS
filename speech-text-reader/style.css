@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url("https://fonts.googleapis.com/css?family=Lato");
 
 * {
   box-sizing: border-box;
@@ -6,7 +6,7 @@
 
 body {
   background: #ffefea;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   min-height: 100vh;
   margin: 0;
 }

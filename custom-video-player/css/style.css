@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Questrial&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
   background-color: #666;
   display: flex;
   flex-direction: column;

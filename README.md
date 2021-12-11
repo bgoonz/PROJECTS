@@ -35,8 +35,6 @@
 [./infinite_scroll_blog/index.html](./infinite_scroll_blog/index.html)
 [./lyrics-search/index.html](./lyrics-search/index.html)
 
-
-
 - [https://bgoonz.github.io/PROJECTS/Javascript-Drum-Kit/index.html](https://bgoonz.github.io/PROJECTS/Javascript-Drum-Kit/index.html)
 - [https://bgoonz.github.io/PROJECTS/Quiz_App_Master/end.html](https://bgoonz.github.io/PROJECTS/Quiz_App_Master/end.html)
 - [https://bgoonz.github.io/PROJECTS/Quiz_App_Master/game.html](https://bgoonz.github.io/PROJECTS/Quiz_App_Master/game.html)

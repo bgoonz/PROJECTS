@@ -1,8 +1,8 @@
-const msgEl = document.getElementById('msg');
+const msgEl = document.getElementById("msg");
 
 const randomNum = getRandomNumber();
 
-console.log('Number:', randomNum);
+console.log("Number:", randomNum);
 
 window.SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -34,13 +34,13 @@ function checkNumber(msg) {
 
   // Check if valid number
   if (Number.isNaN(num)) {
-    msgEl.innerHTML += '<div>That is not a valid number</div>';
+    msgEl.innerHTML += "<div>That is not a valid number</div>";
     return;
   }
 
   // Check in range
   if (num > 100 || num < 1) {
-    msgEl.innerHTML += '<div>Number must be between 1 and 100</div>';
+    msgEl.innerHTML += "<div>Number must be between 1 and 100</div>";
     return;
   }
 
@@ -52,9 +52,9 @@ function checkNumber(msg) {
       <button class="play-again" id="play-again">Play Again</button>
     `;
   } else if (num > randomNum) {
-    msgEl.innerHTML += '<div>GO LOWER</div>';
+    msgEl.innerHTML += "<div>GO LOWER</div>";
   } else {
-    msgEl.innerHTML += '<div>GO HIGHER</div>';
+    msgEl.innerHTML += "<div>GO HIGHER</div>";
   }
 }
 
@@ -64,13 +64,13 @@ function getRandomNumber() {
 }
 
 // Speak result
-recognition.addEventListener('result', onSpeak);
+recognition.addEventListener("result", onSpeak);
 
 // End SR service
-recognition.addEventListener('end', () => recognition.start());
+recognition.addEventListener("end", () => recognition.start());
 
-document.body.addEventListener('click', e => {
-  if (e.target.id == 'play-again') {
+document.body.addEventListener("click", (e) => {
+  if (e.target.id == "play-again") {
     window.location.reload();
   }
 });

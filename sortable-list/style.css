@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 :root {
   --border-color: #e3e5e4;
@@ -18,7 +18,7 @@ body {
   justify-content: flex-start;
   height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 .draggable-list {

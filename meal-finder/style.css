@@ -33,7 +33,7 @@ button {
   margin: 0;
 }
 
-input[type='text'] {
+input[type="text"] {
   width: 300px;
 }
 
@@ -150,7 +150,7 @@ input[type='text'] {
   }
 }
 @media (max-width: 500px) {
-  input[type='text'] {
+  input[type="text"] {
     width: 100%;
   }
 

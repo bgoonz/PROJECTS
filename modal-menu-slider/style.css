@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 :root {
   --modal-duration: 1s;
@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 0;
   transition: transform 0.3s ease;
 }
@@ -87,7 +87,7 @@ header p {
 }
 
 button,
-input[type='submit'] {
+input[type="submit"] {
   background-color: var(--secondary-color);
   border: 0;
   border-radius: 5px;

@@ -1,14 +1,14 @@
-const cardsContainer = document.getElementById('cards-container');
-const prevBtn = document.getElementById('prev');
-const nextBtn = document.getElementById('next');
-const currentEl = document.getElementById('current');
-const showBtn = document.getElementById('show');
-const hideBtn = document.getElementById('hide');
-const questionEl = document.getElementById('question');
-const answerEl = document.getElementById('answer');
-const addCardBtn = document.getElementById('add-card');
-const clearBtn = document.getElementById('clear');
-const addContainer = document.getElementById('add-container');
+const cardsContainer = document.getElementById("cards-container");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+const currentEl = document.getElementById("current");
+const showBtn = document.getElementById("show");
+const hideBtn = document.getElementById("hide");
+const questionEl = document.getElementById("question");
+const answerEl = document.getElementById("answer");
+const addCardBtn = document.getElementById("add-card");
+const clearBtn = document.getElementById("clear");
+const addContainer = document.getElementById("add-container");
 
 // Keep track of current card
 let currentActiveCard = 0;
@@ -41,11 +41,11 @@ function createCards() {
 
 // Create a single card in DOM
 function createCard(data, index) {
-  const card = document.createElement('div');
-  card.classList.add('card');
+  const card = document.createElement("div");
+  card.classList.add("card");
 
   if (index === 0) {
-    card.classList.add('active');
+    card.classList.add("active");
   }
 
   card.innerHTML = `
@@ -63,7 +63,7 @@ function createCard(data, index) {
 </div>
   `;
 
-  card.addEventListener('click', () => card.classList.toggle('show-answer'));
+  card.addEventListener("click", () => card.classList.toggle("show-answer"));
 
   // Add to DOM cards
   cardsEl.push(card);
@@ -80,13 +80,13 @@ function updateCurrentText() {
 
 // Get cards from local storage
 function getCardsData() {
-  const cards = JSON.parse(localStorage.getItem('cards'));
+  const cards = JSON.parse(localStorage.getItem("cards"));
   return cards === null ? [] : cards;
 }
 
 // Add card to local storage
 function setCardsData(cards) {
-  localStorage.setItem('cards', JSON.stringify(cards));
+  localStorage.setItem("cards", JSON.stringify(cards));
   window.location.reload();
 }
 
@@ -95,8 +95,8 @@ createCards();
 // Event listeners
 
 // Next button
-nextBtn.addEventListener('click', () => {
-  cardsEl[currentActiveCard].className = 'card left';
+nextBtn.addEventListener("click", () => {
+  cardsEl[currentActiveCard].className = "card left";
 
   currentActiveCard = currentActiveCard + 1;
 
@@ -104,14 +104,14 @@ nextBtn.addEventListener('click', () => {
     currentActiveCard = cardsEl.length - 1;
   }
 
-  cardsEl[currentActiveCard].className = 'card active';
+  cardsEl[currentActiveCard].className = "card active";
 
   updateCurrentText();
 });
 
 // Prev button
-prevBtn.addEventListener('click', () => {
-  cardsEl[currentActiveCard].className = 'card right';
+prevBtn.addEventListener("click", () => {
+  cardsEl[currentActiveCard].className = "card right";
 
   currentActiveCard = currentActiveCard - 1;
 
@@ -119,18 +119,18 @@ prevBtn.addEventListener('click', () => {
     currentActiveCard = 0;
   }
 
-  cardsEl[currentActiveCard].className = 'card active';
+  cardsEl[currentActiveCard].className = "card active";
 
   updateCurrentText();
 });
 
 // Show add container
-showBtn.addEventListener('click', () => addContainer.classList.add('show'));
+showBtn.addEventListener("click", () => addContainer.classList.add("show"));
 // Hide add container
-hideBtn.addEventListener('click', () => addContainer.classList.remove('show'));
+hideBtn.addEventListener("click", () => addContainer.classList.remove("show"));
 
 // Add new card
-addCardBtn.addEventListener('click', () => {
+addCardBtn.addEventListener("click", () => {
   const question = questionEl.value;
   const answer = answerEl.value;
 
@@ -139,10 +139,10 @@ addCardBtn.addEventListener('click', () => {
 
     createCard(newCard);
 
-    questionEl.value = '';
-    answerEl.value = '';
+    questionEl.value = "";
+    answerEl.value = "";
 
-    addContainer.classList.remove('show');
+    addContainer.classList.remove("show");
 
     cardsData.push(newCard);
     setCardsData(cardsData);
@@ -150,8 +150,8 @@ addCardBtn.addEventListener('click', () => {
 });
 
 // Clear cards button
-clearBtn.addEventListener('click', () => {
+clearBtn.addEventListener("click", () => {
   localStorage.clear();
-  cardsContainer.innerHTML = '';
+  cardsContainer.innerHTML = "";
   window.location.reload();
 });
